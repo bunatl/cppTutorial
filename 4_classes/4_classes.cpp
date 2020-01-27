@@ -12,7 +12,21 @@
 //include header file of my class car
 #include "Car.h"
 
+#include <iostream>
+
+using namespace std;
+
 int main(){
+
+    Car *carA = new Car ( 5, 1400 );
+
+    cout << "Weight of a car is " << carA->getWeight() << endl;
+
+    cout << "This car costs " << carA->getPrice() << endl;
+    carA->setWeight( 2500 );
+    carA->updatePrice();
+    cout << "Weight of a car is " << carA->getWeight() << endl;
+    cout << "This car costs " << carA->getPrice() << endl;
 
     return 0;
 }

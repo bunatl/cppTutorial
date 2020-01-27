@@ -1,0 +1,50 @@
+#include <iostream>
+#include "ComplexNumber.h"
+
+int main(){
+
+  //static allocation
+  std::cout << "Static allocation" << std::endl;
+  ComplexNumber x(1);
+  ComplexNumber y(5,5);
+
+  (x + y).print();
+
+  x.print();
+  x += y;
+  x.print();
+
+  (x * 5).print();
+  x.print();
+  (*x).print();
+
+
+  //dynamic allocation
+  std::cout << "Dynamic allocation" << std::endl;
+  ComplexNumber *z = new ComplexNumber();
+  ComplexNumber *a = new ComplexNumber( 0, 0 );
+  ComplexNumber *b = new ComplexNumber( 5, 5 );
+  ComplexNumber *c = new ComplexNumber( 8, 15 ); 
+
+  z->print();
+
+  a->print();
+  b->print();
+  c->print();
+
+  *a = *c + *b;
+
+  a->print();
+
+  *a += *b;
+
+  a->print();
+
+  *a = *a * 10;
+  a->print();
+
+  //unary operator and pointer dereference
+  (**a).print();
+
+  return 0;
+}
