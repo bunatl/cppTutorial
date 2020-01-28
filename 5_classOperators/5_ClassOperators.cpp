@@ -46,5 +46,13 @@ int main(){
   //unary operator and pointer dereference
   (**a).print();
 
+  //after dynamic allocation memory chunks have o be destroyed and freed
+  //4 * 8B memory is freed
+  //valgrind can help with tracking memeory leaks
+  delete z;
+  delete a;
+  delete b;
+  delete c;
+
   return 0;
 }

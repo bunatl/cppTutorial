@@ -28,5 +28,9 @@ int main(){
     cout << "Weight of a car is " << carA->getWeight() << endl;
     cout << "This car costs " << carA->getPrice() << endl;
 
+    delete carA;
+
+    Car carB( 5,66 );
+
     return 0;
 }

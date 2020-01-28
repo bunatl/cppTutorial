@@ -34,6 +34,16 @@ using namespace std;
  * main has to return an int, therefore at the has be key word return followed by integer
  */ 
 int main() {
+
+    /*
+     * Streams
+     * ostream cout  ~  FILE* stdout
+     * istream cin  ~  FILE* stdin
+     * 
+     * ostream& ostream::operator<< ()
+     * istream& istream::operator>> ()
+     */
+
     // prints Hello World
     cout << "Hello World"; 
 
